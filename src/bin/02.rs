@@ -39,7 +39,7 @@ pub fn part_one(input: &str) -> Option<u32> {
         }
         let game = Game {
             id: id_text.parse::<u32>().unwrap_or(0),
-            subsets: subsets,
+            subsets,
         };
         games.push(game);
     }
@@ -91,7 +91,7 @@ pub fn part_two(input: &str) -> Option<u32> {
         }
         let game = Game {
             id: id_text.parse::<u32>().unwrap_or(0),
-            subsets: subsets,
+            subsets,
         };
         games.push(game);
     }
