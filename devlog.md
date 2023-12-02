@@ -15,6 +15,9 @@ word with the number.
 All was good, until the `eightwo` -> `82` attacked. I definitely wouldn't have figured this out without the help of Kind Stranger,
 so many thanks Zefick for the [hint](https://www.reddit.com/r/adventofcode/comments/1884fpl/2023_day_1for_those_who_stuck_on_part_2/).
 
+To get around this, I simply replaced everything except the last character in the slice with the number, as the leftover character would both be a part of the
+next number if the next set of characters is a number, or ignored if it isn't a valid number.
+
 After that, things worked out fine.
 
 ## [Day 2](src/bin/02.rs)
