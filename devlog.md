@@ -1,7 +1,7 @@
 # Devlog
 Documenting my journey for each day.
 
-## Day 1
+## [Day 1](src/bin/01.rs)
 Nice short and sweet day.
 
 ### Part 1: 00:21:01 Rank 8421
@@ -17,7 +17,7 @@ so many thanks Zefick for the [hint](https://www.reddit.com/r/adventofcode/comme
 
 After that, things worked out fine.
 
-## Day 2
+## [Day 2](src/bin/02.rs)
 A pretty fun day, with a bit of tedium.
 
 ### Part 1: 01:02:52 Rank 11752
