@@ -39,3 +39,18 @@ After all that work organizing the input, the actual solution to the puzzle is p
 The work spent organizing the input paid off, as I can just jump right into the new logic.
 
 Not a whole ton to say, the minimum cubes needed for each colour is the highest number pulled.
+
+## [Day 3](src/bin/03.rs)
+Wasn't able to start right at release time and had to step out during part 2, so the times are abysmal for this one. I tracked the time still though.
+
+### Part 1: 17:47:45 Rank 71424
+Actual time spent was 1:28 straight.
+
+Some fun spent keeping track of the numbers and generating the valid ranges. I ran into some issues creating the ranges and ran into an underflow error when
+trying to generate the ranges.
+
+### Part 2: 22:44:58 Rank 66513
+Actual time spent was 0:18 + another 0:10 for a total time of 1:56.
+
+Some hash map fun here to keep track of the numbers the gears connect to. The only issue I ran into here was skipping over the character directly to the right of
+the number sequence when creating the hash map of gears.
