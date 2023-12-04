@@ -1,8 +1,4 @@
-use std::{
-    collections::hash_map::Entry::Occupied,
-    collections::{HashMap, HashSet},
-    io::Write,
-};
+use std::collections::{HashMap, HashSet};
 
 use regex::Regex;
 
