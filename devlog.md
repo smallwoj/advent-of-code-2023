@@ -54,3 +54,19 @@ Actual time spent was 0:18 + another 0:10 for a total time of 1:56.
 
 Some hash map fun here to keep track of the numbers the gears connect to. The only issue I ran into here was skipping over the character directly to the right of
 the number sequence when creating the hash map of gears.
+
+## [Day 4](src/bin/04.rs)
+
+### Part 1: 00:43:24 Rank 12381
+Some more text parsing. All the spaces between the numbers really messed with my regexes. I made a fools errand of trying to do some wacky
+bitshifting, until I realized that we are doubling, not using powers of 2. Looking back I maybe could've done it, but alas.
+
+### Part 2: 03:26:50 Rank 21131
+This one gave me a ton of trouble. My regex around the game number was messing me up, and rust was giving me a metric ton of borrowing errors that lead me down a
+rabbithole of changes needed so that the compiler doesn't yell at me regarding borrowing, only for me to revert the changes back and it working just fine.
+
+I tried having the copy count in the card struct itself, but that wasn't working, so I settled on the hash map.
+
+I also mistakenly started the problem directly on part 1, which resulted in it's share of problems.
+
+In the end, the copy count was sufficient to have an efficient solution.
