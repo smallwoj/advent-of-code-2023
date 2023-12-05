@@ -70,3 +70,16 @@ I tried having the copy count in the card struct itself, but that wasn't working
 I also mistakenly started the problem directly on part 1, which resulted in it's share of problems.
 
 In the end, the copy count was sufficient to have an efficient solution.
+
+## [Day 5](src/bin/05.rs)
+I think this is the first one I actually had a pretty big struggle to get through.
+
+### Part 1: 02:11:04 Rank 13981
+What a doozy. A ton of repeating code, many things to keep track of, and a tangible problem.
+
+I fell for the source/destination range swap. I also was transforming the ranges to arrays, but that was giving me some issues, so I went ahead and made it use the 
+range calculations.
+
+### Part 2: 03:08:27 Rank 6850
+Even more of a doozy. My hopes of just running the seeds individually were dashed pretty quickly by my lack of RAM. I did the reverse location bruteforce, which runs
+about 7 seconds with release optimization, which I'll take.
