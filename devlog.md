@@ -83,3 +83,13 @@ range calculations.
 ### Part 2: 03:08:27 Rank 6850
 Even more of a doozy. My hopes of just running the seeds individually were dashed pretty quickly by my lack of RAM. I did the reverse location bruteforce, which runs
 about 7 seconds with release optimization, which I'll take.
+
+## [Day 6](src/bin/06.rs)
+Not a whole lot to say, just gotta figure out the quadratic formula for the optimal solution.
+
+### Part 1: 00:42:38 Rank 10922
+Took some time to figure out the formula needed, as well as parsing the input.
+
+### Part 2: 00:56:11 Rank 11019
+Toughest part here was combining the numbers together, but there's prolly a better way to do it.
+
