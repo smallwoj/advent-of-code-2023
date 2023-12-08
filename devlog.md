@@ -93,3 +93,16 @@ Took some time to figure out the formula needed, as well as parsing the input.
 ### Part 2: 00:56:11 Rank 11019
 Toughest part here was combining the numbers together, but there's prolly a better way to do it.
 
+## [Day 7](src/bin/07.rs)
+This was a fun one, dealing with the comparators and all that. This time I put the structs in the solve function itself so that changes are easily made if
+needed, which was needed today.
+
+Was too tired to do it at the usual time, took a couple hours for the first part, and another 40 minutes for the second part.
+
+### Part 1: 16:55:38 Rank 49845
+Implementing the `cmp` function will likely be helpful in future days, so that's nice to have. I like the match solution for counting the distinct symbols as
+well. Got mixed up with the sorting order that rust does, and it's kind of a shame you have to reverse it instead of just saying 'I want it sorted the other way'.
+
+### Part 2: 17:38:02 Rank 44427
+Definitely not the most efficient solution, but it was fun to do at least. Missed the part where the `J` became the lowest ranked card, which cost me some time.
+
