@@ -106,3 +106,12 @@ well. Got mixed up with the sorting order that rust does, and it's kind of a sha
 ### Part 2: 17:38:02 Rank 44427
 Definitely not the most efficient solution, but it was fun to do at least. Missed the part where the `J` became the lowest ranked card, which cost me some time.
 
+## [Day 8](src/bin/08.rs)
+Now we're getting to the class of problems entitled "I have no idea how to solve these as these involve some math concept I don't know".
+
+### Part 1: 00:21:58 Rank 6285
+Lowest time for a part 1 so far. The code for simulating it is pretty simple.
+
+### Part 2: 01:44:47 Rank 7985
+I still don't understand it. I'll update this when I actually know what's going on. Shout-out to [this comment](https://www.reddit.com/r/adventofcode/comments/18df7px/comment/kcgsa7x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button).
+
