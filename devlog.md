@@ -115,3 +115,13 @@ Lowest time for a part 1 so far. The code for simulating it is pretty simple.
 ### Part 2: 01:44:47 Rank 7985
 I still don't understand it. I'll update this when I actually know what's going on. Shout-out to [this comment](https://www.reddit.com/r/adventofcode/comments/18df7px/comment/kcgsa7x/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button).
 
+## [Day 9](src/bin/09.rs)
+Fun day, interesting problem. Could have solved it a looot faster if I didn't make a silly mistake.
+
+### Part 1: 01:22:41 Rank 10133
+So I assumed that the numbers would be unsigned, so I made the difference an absolute value. Turns out that wasn't the case, and the absolute value stuck
+around, causing my solution to work fine with the example, but not the actual input.
+
+### Part 2: 01:25:36 Rank 9539
+Same problem, just reverse the input sequence.
+
