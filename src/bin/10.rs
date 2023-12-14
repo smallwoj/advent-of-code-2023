@@ -82,8 +82,8 @@ pub fn part_one(input: &str) -> Option<u32> {
     }
     start.connected = nodes
         .iter()
-        .cloned()
         .filter(|node| node.connected.contains(&start.pos))
+        .cloned()
         .map(|node| node.clone().pos)
         .collect::<Vec<(usize, usize)>>();
     let start_pos = start.pos;
@@ -190,8 +190,8 @@ pub fn part_two(input: &str) -> Option<u32> {
     }
     start.connected = nodes
         .iter()
-        .cloned()
         .filter(|node| node.connected.contains(&start.pos))
+        .cloned()
         .map(|node| node.clone().pos)
         .collect::<Vec<(usize, usize)>>();
     let start_pos = start.pos;
