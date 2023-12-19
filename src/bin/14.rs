@@ -57,8 +57,8 @@ pub fn part_two(input: &str) -> Option<usize> {
     fn rotate(grid: Vec<Vec<char>>) -> Vec<Vec<char>> {
         let mut new_grid = vec![vec!['.'; grid.len()]; grid[0].len()];
         for r in 0..grid.len() {
-            for c in 0..grid[0].len() {
-                new_grid[c][grid.len() - 1 - r] = grid[r][c];
+            for (c, row) in new_grid.iter_mut().enumerate().take(grid[0].len()) {
+                row[grid.len() - 1 - r] = grid[r][c];
             }
         }
         new_grid
