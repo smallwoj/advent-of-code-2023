@@ -11,7 +11,10 @@ struct Card {
 }
 
 pub fn part_one(input: &str) -> Option<u32> {
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let card_re = Regex::new(r"Card ([0-9 ]+):([0-9 ]+)\|([0-9 ]+)").unwrap();
     let space_re = Regex::new(r"\s+").unwrap();
     let mut cards = vec![];
@@ -62,7 +65,10 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let card_re = Regex::new(r"Card\s+([0-9]+):([0-9 ]+)\|([0-9 ]+)").unwrap();
     let space_re = Regex::new(r"\s+").unwrap();
     let mut cards = vec![];

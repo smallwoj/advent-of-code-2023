@@ -23,6 +23,7 @@ pub fn part_one(input: &str) -> Option<i32> {
             .map(|grid_str| {
                 let lines = grid_str
                     .split('\n')
+                    .filter(|el| !el.is_empty())
                     .map(|str| str.to_owned())
                     .collect::<Vec<String>>();
                 let line_index = find_horizontal_line_of_reflection(lines.clone());
@@ -72,6 +73,7 @@ pub fn part_two(input: &str) -> Option<i32> {
             .map(|grid_str| {
                 let lines = grid_str
                     .split('\n')
+                    .filter(|el| !el.is_empty())
                     .map(|str| str.to_owned())
                     .collect::<Vec<String>>();
                 let mut original_horizontal = false;

@@ -75,7 +75,10 @@ pub fn part_one(input: &str) -> Option<u32> {
             self.hand == other.hand
         }
     }
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let mut hands = vec![];
     for line in lines {
         let [hand_str, bet_str] = line.split_whitespace().collect::<Vec<&str>>()[..] else {
@@ -178,7 +181,10 @@ pub fn part_two(input: &str) -> Option<u32> {
             self.hand == other.hand
         }
     }
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let mut hands = vec![];
     for line in lines {
         let [hand_str, bet_str] = line.split_whitespace().collect::<Vec<&str>>()[..] else {

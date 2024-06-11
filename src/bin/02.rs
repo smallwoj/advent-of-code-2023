@@ -7,7 +7,10 @@ struct Game {
 }
 
 pub fn part_one(input: &str) -> Option<u32> {
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let mut games = vec![];
     let line_re = Regex::new(r"Game ([0-9]+): (.*)").unwrap();
     for line in lines {
@@ -59,7 +62,10 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let mut games = vec![];
     let line_re = Regex::new(r"Game ([0-9]+): (.*)").unwrap();
     for line in lines {

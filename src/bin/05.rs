@@ -2,7 +2,10 @@ advent_of_code::solution!(5);
 
 pub fn part_one(input: &str) -> Option<u64> {
     let [seeds_str, seed_to_soil_str, soil_to_fertilizer_str, fertilizer_to_water_str, water_to_light_str, light_to_temperature_str, temperature_to_humidity_str, humidity_to_location_str] =
-        input.split("\n\n").collect::<Vec<&str>>()[..]
+        input
+            .split("\n\n")
+            .filter(|el| !el.is_empty())
+            .collect::<Vec<&str>>()[..]
     else {
         panic!("could not unpack sections correctly");
     };
@@ -83,6 +86,7 @@ pub fn part_one(input: &str) -> Option<u64> {
     let mut temperature_to_humidity_range = vec![];
     for line in &mut temperature_to_humidity_str
         .split('\n')
+        .filter(|el| !el.is_empty())
         .collect::<Vec<&str>>()[1..]
     {
         let [dest_start_str, source_start_str, length_str] =
@@ -98,7 +102,11 @@ pub fn part_one(input: &str) -> Option<u64> {
         temperature_to_humidity_range.push((source_range, dest_range));
     }
     let mut humidity_to_location_range = vec![];
-    for line in &mut humidity_to_location_str.split('\n').collect::<Vec<&str>>()[1..] {
+    for line in &mut humidity_to_location_str
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>()[1..]
+    {
         let [dest_start_str, source_start_str, length_str] =
             line.split(' ').collect::<Vec<&str>>()[..]
         else {
@@ -297,7 +305,11 @@ pub fn part_two(input: &str) -> Option<u64> {
         temperature_to_humidity_range.push((source_range, dest_range));
     }
     let mut humidity_to_location_range = vec![];
-    for line in &mut humidity_to_location_str.split('\n').collect::<Vec<&str>>()[1..] {
+    for line in &mut humidity_to_location_str
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>()[1..]
+    {
         let [dest_start_str, source_start_str, length_str] =
             line.split(' ').collect::<Vec<&str>>()[..]
         else {

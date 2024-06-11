@@ -21,7 +21,7 @@ enum Dir {
 
 pub fn part_one(input: &str) -> Option<usize> {
     let mut grid = vec![];
-    for line in input.split('\n') {
+    for line in input.split('\n').filter(|el| !el.is_empty()) {
         let mut row = vec![];
         for c in line.chars() {
             row.push(match c {
@@ -130,7 +130,7 @@ pub fn part_one(input: &str) -> Option<usize> {
 
 pub fn part_two(input: &str) -> Option<usize> {
     let mut grid = vec![];
-    for line in input.split('\n') {
+    for line in input.split('\n').filter(|el| !el.is_empty()) {
         let mut row = vec![];
         for c in line.chars() {
             row.push(match c {

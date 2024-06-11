@@ -11,7 +11,10 @@ pub fn part_one(input: &str) -> Option<u32> {
     let mut sequence_iter = sequence.chars().cycle();
     let mut node_defs = HashMap::new();
     let node_def_re = Regex::new(r"([A-Z]+) = \(([A-Z]+), ([A-Z]+)\)").unwrap();
-    let lines = node_defs_str.split('\n').collect::<Vec<&str>>();
+    let lines = node_defs_str
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     for line in lines {
         let (_, [node, left, right]) = node_def_re.captures(line).unwrap().extract();
         node_defs.insert(node, (left, right));
@@ -42,7 +45,10 @@ pub fn part_two(input: &str) -> Option<u64> {
     };
     let mut node_defs = HashMap::new();
     let node_def_re = Regex::new(r"([0-9A-Z]+) = \(([0-9A-Z]+), ([0-9A-Z]+)\)").unwrap();
-    let lines = node_defs_str.split('\n').collect::<Vec<&str>>();
+    let lines = node_defs_str
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     for line in lines {
         let (_, [node, left, right]) = node_def_re.captures(line).unwrap().extract();
         node_defs.insert(node, (left, right));

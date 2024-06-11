@@ -1,7 +1,7 @@
 advent_of_code::solution!(12);
 
 pub fn part_one(input: &str) -> Option<u32> {
-    let lines = input.split('\n');
+    let lines = input.split('\n').filter(|el| !el.is_empty());
     let mut conditions = vec![];
     for line in lines {
         let [springs, sequence_str] = line.split_whitespace().collect::<Vec<&str>>()[..] else {
@@ -62,7 +62,7 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u64> {
-    let lines = input.split('\n');
+    let lines = input.split('\n').filter(|el| !el.is_empty());
     let mut conditions = vec![];
     for line in lines {
         let [springs, sequence_str] = line.split_whitespace().collect::<Vec<&str>>()[..] else {

@@ -4,7 +4,10 @@ use std::{cmp::min, collections::HashMap};
 advent_of_code::solution!(3);
 
 pub fn part_one(input: &str) -> Option<u32> {
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let number_re = Regex::new(r"[0-9]").unwrap();
     let chars = lines
         .iter()
@@ -84,7 +87,10 @@ pub fn part_one(input: &str) -> Option<u32> {
 }
 
 pub fn part_two(input: &str) -> Option<u32> {
-    let lines = input.split('\n').collect::<Vec<&str>>();
+    let lines = input
+        .split('\n')
+        .filter(|el| !el.is_empty())
+        .collect::<Vec<&str>>();
     let number_re = Regex::new(r"[0-9]").unwrap();
     let chars = lines
         .iter()
