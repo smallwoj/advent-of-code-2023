@@ -63,7 +63,7 @@ pub fn part_two(input: &str) -> Option<usize> {
         }
         new_grid
     }
-    fn tilt(grid: &mut Vec<Vec<char>>) {
+    fn tilt(grid: &mut [Vec<char>]) {
         let mut done = false;
         while !done {
             done = true;

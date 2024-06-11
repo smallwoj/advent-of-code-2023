@@ -154,7 +154,7 @@ pub fn part_two(input: &str) -> Option<u32> {
                             }
                         }
                     }
-                    potential_hands = new_potential_hands.clone();
+                    potential_hands.clone_from(&new_potential_hands)
                 }
                 potential_hands
                     .iter()
